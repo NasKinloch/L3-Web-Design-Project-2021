@@ -1,0 +1,33 @@
+<!doctype html>
+
+<head>
+    <title>eeee</title>
+</head>
+<script>
+    function run() {
+        var main = document.getElementById('products');
+        
+        for (var i = 0; i < 5; i++) {
+        var list = document.createElement('li');
+        var para = document.createElement('p');
+        var buttons = document.createElement('button');
+        var heading = document.createElement('h1');
+
+
+            main.appendChild(list);
+            list.appendChild(para);
+            list.appendChild(buttons);
+            list.appendChild(heading);
+
+            para.innerHTML = 'here is text'
+            buttons.innerHTML = 'click me'
+            heading.innerHTML = '$' + 10+10*i
+        }
+    }
+
+</script>
+
+<body onload="run()">
+    <ul id="products">
+    </ul>
+</body>
