@@ -30,6 +30,8 @@
         ['images/item 3.png', 9.99, 'product 3'],
         ['images/item 4.png', 39.99, 'product 4']
     ];
+    
+    var cartItems = [];
 
     function run() {
         var main = document.getElementById('products');
@@ -67,18 +69,35 @@
             add.dataset.cartIndex = i;
             add.addEventListener('click', adding, false);
         }
+    }
 
         function adding(event) {
             const NUM = event.currentTarget.dataset.cartIndex;
 
-            alert('$' + items[NUM][1]);
+            cartItems.push([items[NUM]]);
+            cartItems[cartItems.length - 1][1] = Number(document.getElementById('input' + NUM).value);
+            
+            updateCart();
         }
-    }
+        
+        var totalItems = 0;
+        
+        function updateCart(){
+            var itemCount = document.getElementById('itemCount');
+            
+            totalItems = 0;
+            for(var i = 0; i < cartItems.length; i++){
+                totalItems += cartItems[i][1];
+            }
+            itemCounter.innerHTML = totalItems;
+        }
+    
 
 </script>
 
 <body onload="run()">
-    <h1>Cart Items:</h1><h2 id='itemCount'>0</h2>
+    <h1>Cart Items:</h1>
+    <h2 id='itemCount'>0</h2>
     <ul id="products">
 
     </ul>
