@@ -2,103 +2,18 @@
 
 <head>
     <title>eeee</title>
-</head>
-<style>
-    li {
-        width 30%;
-    }
+<link rel="stylesheet" href="styles.css">
+<script src="shopping.js"></script>
+    </head>
 
-    li img {
-        width 100%;
-    }
-
-    h1 {
-        display: inline-block;
-        margin: 0px 20px;
-    }
-
-    h2 {
-        display: inline-block;
-        color: red;
-    }
-
-</style>
-<script>
-    var items = [
-        ['images/item 1.png', 29.99, 'product 1'],
-        ['images/item 2.png', 19.99, 'product 2'],
-        ['images/item 3.png', 9.99, 'product 3'],
-        ['images/item 4.png', 39.99, 'product 4']
-    ];
-    
-    var cartItems = [];
-
-    function run() {
-        var main = document.getElementById('products');
-
-        //all elements to be added
-        for (var i = 0; i < items.length; i++) {
-
-
-            var ele = document.createElement('li');
-            var pic = document.createElement('img');
-            var price = document.createElement('h1');
-            var desc = document.createElement('h2');
-            var add = document.createElement('button');
-            var typeBox = document.createElement('input');
-
-            //push elements into html
-            main.appendChild(ele);
-            ele.appendChild(pic);
-            ele.appendChild(price);
-            ele.appendChild(desc);
-            ele.appendChild(add);
-            ele.appendChild(typeBox);
-
-            //edit pushed elements info from array
-
-            pic.src = items[0][0];
-            price.innerHTML = '$' + items[0][1];
-            desc.innerHTML = items[0][2];
-            add.innerHTML = 'add';
-            typeBox.type = 'number';
-
-            typeBox.setAttribute("id", "input", i);
-            typeBox.value = 1;
-            
-            add.dataset.cartIndex = i;
-            add.addEventListener('click', adding, false);
-        }
-    }
-
-        function adding(event) {
-            const NUM = event.currentTarget.dataset.cartIndex;
-
-            cartItems.push([items[NUM]]);
-            cartItems[cartItems.length - 1][1] = Number(document.getElementById('input' + NUM).value);
-            
-            updateCart();
-        }
-        
-        var totalItems = 0;
-        
-        function updateCart(){
-            var itemCount = document.getElementById('itemCount');
-            
-            totalItems = 0;
-            for(var i = 0; i < cartItems.length; i++){
-                totalItems += cartItems[i][1];
-            }
-            itemCounter.innerHTML = totalItems;
-        }
-    
-
-</script>
-
-<body onload="run()">
+<body onload="loadCart()">
+    <nav>
+        <a href="index.html">Shop</a>
+        <a href="cart.html">Cart</a>
+    </nav>
     <h1>Cart Items:</h1>
     <h2 id='itemCount'>0</h2>
-    <ul id="products">
+    <ul id="cartProducts">
 
     </ul>
 </body>
