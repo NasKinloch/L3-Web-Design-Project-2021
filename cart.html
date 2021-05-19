@@ -2,32 +2,38 @@
 
 <head>
     <title>eeee</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="shopping.js"></script>
 </head>
-<script>
-    function run() {
-        var main = document.getElementById('products');
-        
-        for (var i = 0; i < 5; i++) {
-        var list = document.createElement('li');
-        var para = document.createElement('p');
-        var buttons = document.createElement('button');
-        var heading = document.createElement('h1');
 
+<body onload="loadCart()">
+    <h1 class="title">Style Sync</h1>
+    <nav>
+        <div class="helpbar">
+            <a href="about.html">About </a> |
+<!--            <a href="Help.html">Help</a> |-->
+            <a href="Contacts.html">Contacts</a>
+        </div>
+        <div class="white">
+        </div>
+        <div class="cart">
+            <a href="cart.html">Shopping Cart</a>
+            <a href="cart.html"><img src="images/cartIcon.png"></a>
+            <p id="totalItems">0</p>
+        </div>
+        <img class="logo" src="images/logo.png">
+        <div class="navbar">
+            <a href="index.html">Home</a>
+            <a href="Clothes.html">Clothes</a>
+<!--            <a href="Sales.html">Sales</a>-->
+        </div>
+    </nav>
+    <section>
+    
+        <h1>Cart Items:</h1>
+        <h2 id='itemCount'>0</h2>
+        <ul id="cartProducts">
 
-            main.appendChild(list);
-            list.appendChild(para);
-            list.appendChild(buttons);
-            list.appendChild(heading);
-
-            para.innerHTML = 'here is text'
-            buttons.innerHTML = 'click me'
-            heading.innerHTML = '$' + 10+10*i
-        }
-    }
-
-</script>
-
-<body onload="run()">
-    <ul id="products">
-    </ul>
+        </ul>
+    </section>
 </body>

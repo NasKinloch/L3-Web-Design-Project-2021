@@ -3,28 +3,34 @@
 <head>
     <title>Style Sync</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="shopping.js"></script>
 </head>
 
-<body>
+<body onload="run()">
     <h1 class="title">Style Sync</h1>
     <nav>
         <div class="helpbar">
-            <a href="about.hmtl">About </a> |
-            <a href="Help.html">Help</a> |
-            <a href="">Contacts</a>
+            <a href="about.html">About </a> |
+<!--            <a href="Help.html">Help</a> |-->
+            <a href="Contacts.html">Contacts</a>
         </div>
         <div class="white">
         </div>
         <div class="cart">
-            <a href="">Shopping Cart</a>
-            <a href=""><img src="cartIcon.png"></a>
+            <a href="cart.html">Shopping Cart</a>
+            <a href="cart.html"><img src="images/cartIcon.png"></a>
             <p id="totalItems">0</p>
         </div>
-        <img class="logo" src="logo.png">
+        <img class="logo" src="images/logo.png">
         <div class="navbar">
             <a href="index.html">Home</a>
             <a href="Clothes.html">Clothes</a>
-            <a href="Sales.html">Sales</a>
+<!--            <a href="Sales.html">Sales</a>-->
         </div>
     </nav>
+    <section>       
+        <ul id="products">
+        
+        </ul>
+    </section>
 </body>

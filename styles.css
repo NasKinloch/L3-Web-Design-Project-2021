@@ -95,26 +95,6 @@ nav h1 {}
     min-height: 50vh;
 }
 
-ul {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 50px;
-    margin: 0px;
-    padding: 0px;
-    width: 80%;
-}
-
-li {
-    width 100%;
-    background-color: grey;
-    list-style: none;
-    padding: 20px;
-    margin: 10px;
-}
-
-li img {
-    width 100%;
-}
 
 h1 {
     display: inline-block;
@@ -135,4 +115,36 @@ nav a {
 
 nav a:hover {
     color: greenyellow;
+}
+
+section {
+    width: 90%;
+    margin: 20px auto;
+    background-color: grey;
+    min-height: 30vh;
+    background-color: #f0f0f0;
+}
+
+ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2vw;
+    width: 80%;
+    margin: auto;
+    place-items: center;
+}
+
+li {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: grey;
+    list-style: none;
+/*    padding: 5%;*/
+/*    margin: auto;*/
+}
+
+li img {
+    width: 100%;
 }
