@@ -7,7 +7,7 @@
 
 nav {
     display: grid;
-
+    font-family: Microsoft New Tai Lue;
     grid-template-columns: 1fr 2fr 1fr;
     background-color: #434850;
 }
@@ -84,7 +84,6 @@ nav h1 {}
     min-height: 50vh;
 }
 
-.item1 {}
 
 .right {
     background-color: #f0f0f0;
@@ -123,6 +122,10 @@ section {
     background-color: grey;
     min-height: 30vh;
     background-color: #f0f0f0;
+        grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    font-size: 30px;
+    font-family: Microsoft New Tai Lue;
 }
 
 ul {
@@ -148,3 +151,4 @@ li {
 li img {
     width: 100%;
 }
+
